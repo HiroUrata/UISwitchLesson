@@ -9,11 +9,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var plusMinusButton: UIButton!
+    @IBOutlet weak var plusMinusSwitch: UISwitch!
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        plusMinusSwitch.onTintColor = .systemTeal
+        
     }
 
-
+    @IBAction func modeChenge(_ sender: Any) {
+        
+        if plusMinusSwitch.isOn == true{
+            
+            count = count + 1
+            
+            countLabel.text = String(count)
+            
+        }else if plusMinusSwitch.isOn == false{
+            
+            count = count - 1
+            
+            countLabel.text = String(count)
+            
+        }
+        
+    }
+    
 }
 
