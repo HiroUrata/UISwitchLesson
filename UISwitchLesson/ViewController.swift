@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func modeChenge(_ sender: Any) {
+    
+    @IBAction func countUpMinus(_ sender: Any) {
         
         if plusMinusSwitch.isOn == true{
             
@@ -46,7 +47,28 @@ class ViewController: UIViewController {
             
         }
         
+        
     }
+    
+    
+    @IBAction func modeChange(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+            plusMinusButton.backgroundColor = .systemGreen
+            plusMinusButton.setTitle("+", for: .normal)
+            
+        }else if sender.isOn == false{
+            
+            plusMinusButton.backgroundColor = .systemTeal
+            plusMinusButton.setTitle("-", for: .normal)
+            
+        }
+        
+        
+    }
+    
+    
     
 }
 
